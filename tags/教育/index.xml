@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>教育 - 标签 - 黄金定的博客</title>
+        <link>http://example.org/tags/%E6%95%99%E8%82%B2/</link>
+        <description>教育 - 标签 - 黄金定的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>919406142@qq.com (黄金定)</managingEditor>
+            <webMaster>919406142@qq.com (黄金定)</webMaster><lastBuildDate>Fri, 02 Apr 2021 16:42:04 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E6%95%99%E8%82%B2/" rel="self" type="application/rss+xml" /><item>
+    <title>有意思的数学</title>
+    <link>http://example.org/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%95%B0%E5%AD%A6/</link>
+    <pubDate>Fri, 02 Apr 2021 16:42:04 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%95%B0%E5%AD%A6/</guid>
+    <description><![CDATA[学习对数有什么用 简化运算 乘法变加法，除法变减法，乘方变乘法，开方变除法 可以知道你把钱存银行什么时候能当上世界首富。 自然常数e 用复利解释 1块钱]]></description>
+</item></channel>
+</rss>
