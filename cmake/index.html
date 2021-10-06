@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>cmake - 黄金定的博客</title><meta name="Description" content="这是我的网站"><meta property="og:title" content="cmake" />
+<meta property="og:description" content="把所有cmake缓存集中到build目录，便于删除 1 2 3 4 mkdir build cd build cmake .. make 命令不区分大小写，参数和变量区分大小写 CMake注释 单行注释：#注释" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/cmake/" /><meta property="og:image" content="http://example.org/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-12-05T16:21:16&#43;08:00" />
+<meta property="article:modified_time" content="2018-12-05T16:21:16&#43;08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/logo.png"/>
+
+<meta name="twitter:title" content="cmake"/>
+<meta name="twitter:description" content="把所有cmake缓存集中到build目录，便于删除 1 2 3 4 mkdir build cd build cmake .. make 命令不区分大小写，参数和变量区分大小写 CMake注释 单行注释：#注释"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/cmake/" /><link rel="prev" href="http://example.org/gccg-/" /><link rel="next" href="http://example.org/snmp/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "cmake",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/cmake\/"
+        },"genre": "posts","keywords": "计算机","wordcount":  1875 ,
+        "url": "http:\/\/example.org\/cmake\/","datePublished": "2018-12-05T16:21:16+08:00","dateModified": "2018-12-05T16:21:16+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "黄金定"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="黄金定的博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatar.jpg"
+        data-srcset="/images/avatar.jpg, /images/avatar.jpg 1.5x, /images/avatar.jpg 2x"
+        data-sizes="auto"
+        alt="/images/avatar.jpg"
+        title="/images/avatar.jpg" />海的彼岸</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="黄金定的博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatar.jpg"
+        data-srcset="/images/avatar.jpg, /images/avatar.jpg 1.5x, /images/avatar.jpg 2x"
+        data-sizes="auto"
+        alt="/images/avatar.jpg"
+        title="/images/avatar.jpg" />海的彼岸</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">cmake</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>黄金定</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-12-05">2018-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1875 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#把所有cmake缓存集中到build目录便于删除">把所有cmake缓存集中到build目录，便于删除</a></li>
+        <li><a href="#cmake注释">CMake注释</a></li>
+        <li><a href="#cmake变量">CMake变量</a></li>
+        <li><a href="#cmake列表lists">CMake列表（lists）</a></li>
+        <li><a href="#cmake流程控制">CMake流程控制</a>
+          <ul>
+            <li><a href="#操作符">【操作符】</a></li>
+            <li><a href="#布尔常量值">【布尔常量值】</a></li>
+            <li><a href="#条件命令">【条件命令】</a></li>
+            <li><a href="#循环命令">【循环命令】</a></li>
+            <li><a href="#循环遍历">【循环遍历】</a></li>
+            <li><a href="#cmake自定义函数命令">CMake自定义函数命令</a></li>
+            <li><a href="#cmake自定义宏命令">CMake自定义宏命令</a></li>
+            <li><a href="#cmake中变量的作用域">CMake中变量的作用域</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="把所有cmake缓存集中到build目录便于删除">把所有cmake缓存集中到build目录，便于删除</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mkdir build
+cd build
+cmake ..
+make
+</code></pre></td></tr></table>
+</div>
+</div><p>命令不区分大小写，参数和变量区分大小写</p>
+<h3 id="cmake注释">CMake注释</h3>
+<p>单行注释：#注释内容
+多行注释：可以使用括号来实现多行注释：
+#[[多行注释
+多行注释
+多行注释]]</p>
+<h3 id="cmake变量">CMake变量</h3>
+<p>CMake中所有的变量都是string类型，可以使用set() 和 unset() 命令来声明或者移除一个变量
+变量的引用：${变量名}
+#声明变量 set(变量名 变量值)
+set(var 123)
+#引用变量 message命令打印
+message(&ldquo;var = ${var}&quot;)</p>
+<h3 id="cmake列表lists">CMake列表（lists）</h3>
+<p>列表也是字符串，可以把列表看做是一个特殊的变量，这个变量有多个值。
+语法格式：
+set(列表名 值1 值2 &hellip; 值n)
+或
+set(列表名 “值1;值2;&hellip;值n”)
+列表的引用：
+${列表名}
+#声明列表 set set(列表名 值1 值2 &hellip; 值n) 或 set(列表名 “值1;值2;&hellip;值n”)
+set(list_var 1 2 3 4 5)
+#或者
+set(list_var &ldquo;1;2;3;4;5&rdquo;)
+#打印列表
+message(&ldquo;list_var = ${list_var}&quot;)</p>
+<h3 id="cmake流程控制">CMake流程控制</h3>
+<h4 id="操作符">【操作符】</h4>
+<p>一元：EXIST, COMMAND, DEFINED
+二元：EQUAL, LESS, LESS_EQUAL, GRATER, GRATER_EQUAL, STR&hellip; VERSION&hellip; MATCHES
+逻辑：NOT, AND, OR</p>
+<h4 id="布尔常量值">【布尔常量值】</h4>
+<p>true: 1, ON, YES, TRUE, Y, 非0的值
+false: 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND, 空字符串, 以NOTFOUND结尾的字符串</p>
+<h4 id="条件命令">【条件命令】</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cmake" data-lang="cmake"><span class="nb">if</span> <span class="p">(</span><span class="s">表达式</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">COMMAND</span><span class="p">(</span><span class="s">ARGS...</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">elseif</span><span class="p">(</span><span class="s">表达式</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">COMMAND</span><span class="p">(</span><span class="s">ARGS...</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">else</span><span class="p">(</span><span class="s">表达式</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">COMMAND</span><span class="p">(</span><span class="s">ARGS...</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">endif</span><span class="p">(</span><span class="s">表达式</span><span class="p">)</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="循环命令">【循环命令】</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cmake" data-lang="cmake"><span class="nb">while</span><span class="p">(</span><span class="s">表达式</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">COMMAND</span><span class="p">(</span><span class="s">ARGS...</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">endwhile</span><span class="p">(</span><span class="s">表达式</span><span class="p">)</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>break() 命令可以跳出整个循环， continue() 可以跳出当前循环。</p>
+<h4 id="循环遍历">【循环遍历】</h4>
+<blockquote>
+<p>foreach(循环变量 参数1 参数2&hellip; 参数N)</p>
+<p>COMMAND(ARGS&hellip;)</p>
+<p>endforeach(循环变量)</p>
+<p>每次迭代设置循环遍历为参数。</p>
+<p>foreach也支持 break() 和 continue() 命令跳出循环。</p>
+</blockquote>
+<p>RANGE 4 表示0到4</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cmake" data-lang="cmake"><span class="nb">foreach</span><span class="p">(</span><span class="s">item</span> <span class="s">RANGE</span> <span class="s">4</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">message</span><span class="p">(</span><span class="s2">&#34;item = ${item}&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">endforeach</span><span class="p">(</span><span class="s">item</span><span class="p">)</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>循环范围从 start 到 stop， 循环增量为step</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cmake" data-lang="cmake"><span class="nb">foreach</span><span class="p">(</span><span class="s">循环变量</span> <span class="s">RANGE</span> <span class="s">start</span> <span class="s">stop</span> <span class="s">step</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">COMMAND</span><span class="p">(</span><span class="s">ARGS...</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">endforeach</span><span class="p">(</span><span class="s">循环变量</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err">foreach支持对列表的循环
+</span><span class="err">
+</span><span class="err"></span><span class="nb">foreach</span><span class="p">(</span><span class="s">循环遍历</span> <span class="s">IN</span> <span class="s">LISTS</span> <span class="s">列表</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">COMMAND</span><span class="p">(</span><span class="s">ARGS...</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">endforeach</span><span class="p">(</span><span class="s">循环变量</span><span class="p">)</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="cmake自定义函数命令">CMake自定义函数命令</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cmake" data-lang="cmake"><span class="nb">function</span><span class="p">(</span><span class="s">&lt;name&gt;[arg1</span> <span class="s">[arg3</span> <span class="s">[arg3...]]]</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">COMMAND</span><span class="p">(</span><span class="s">ARGS...</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">endfunction</span><span class="p">(</span><span class="s">&lt;name&gt;</span><span class="p">)</span><span class="err">
+</span><span class="err">函数命令调用格式
+</span><span class="err"></span><span class="nb">name</span><span class="p">(</span><span class="s">参数列表</span><span class="p">)</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="cmake自定义宏命令">CMake自定义宏命令</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cmake" data-lang="cmake"><span class="nb">macro</span><span class="p">(</span><span class="s">&lt;name&gt;[arg1</span> <span class="s">[arg3</span> <span class="s">[arg3...]]]</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">COMMAND</span><span class="p">(</span><span class="s">ARGS...</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">endmacro</span><span class="p">(</span><span class="s">&lt;name&gt;</span><span class="p">)</span><span class="err">
+</span><span class="err">宏定义调用格式
+</span><span class="err"></span><span class="nb">name</span><span class="p">(</span><span class="s">实参列表</span><span class="p">)</span><span class="err">
+</span><span class="err">函数命令有自己的作用域，宏的作用域和调用者的作用域是一样的。
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="cmake中变量的作用域">CMake中变量的作用域</h4>
+<p>全局层：cache变量，在整个项目范围可见，一般在set定义变量式，指定CACHE参数就能定义cache变量。
+目录层：在当前目录CMakeLists.txt中定义，以及在该文件包含的其他Cmake源文件中定义的变量。
+函数层：在命令函数中定义的变量，属于函数作用域内的变量。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cmake" data-lang="cmake"><span class="c">##myprint
+</span><span class="c">#指定CMake编译最低要求版本
+</span><span class="c"></span><span class="nb">CMAKE_MINIMUM_REQUIRED</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.11</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#给项目命名
+</span><span class="c"></span><span class="nb">PROJECT</span><span class="p">(</span><span class="s">MYPRINT</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#收集c/c++文件并赋值给变量SRC_LIST_CPP ${PROJECT_SOURCE_DIR}代表区当前项目录
+</span><span class="c"></span><span class="nb">FILE</span><span class="p">(</span><span class="s">GLOB</span> <span class="s">SRC_LIST_CPP</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/src/*.cpp</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="nb">FILE</span><span class="p">(</span><span class="s">GLOB</span> <span class="s">SRC_LIST_C</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/src/*.c</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#指定头文件目录
+</span><span class="c"></span><span class="nb">INCLUDE_DIRECTORIES</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/include</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#指定生成库文件的目录
+</span><span class="c"></span><span class="nb">SET</span><span class="p">(</span><span class="s">LIBRARY_OUTPUT_PATH</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/lib</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#去变量SRC_LIST_CPP 与SRC_LIST_C 指定生成libmyprint 动态库 默认生成静态库 SHARED指定生成库类型为动态库
+</span><span class="c"></span><span class="nb">ADD_LIBRARY</span><span class="p">(</span><span class="s">myprint</span> <span class="s">SHARED</span> <span class="o">${</span><span class="nv">SRC_LIST_CPP</span><span class="o">}</span> <span class="o">${</span><span class="nv">SRC_LIST_C</span><span class="o">}</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">##hello
+</span><span class="c">#指定CMake编译最低要求版本
+</span><span class="c"></span><span class="nb">CMAKE_MINIMUM_REQUIRED</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.11</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#指定项目名称
+</span><span class="c"></span><span class="nb">PROJECT</span><span class="p">(</span><span class="s">HELLO</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#将hello.cpp 赋值给SOURCE 变量
+</span><span class="c"></span><span class="nb">SET</span><span class="p">(</span><span class="s">SOURCE</span> <span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/src/hello.cpp</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#指定头文件目录
+</span><span class="c"></span><span class="nb">INCLUDE_DIRECTORIES</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/../test/include</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#指定链接库文件目录
+</span><span class="c"></span><span class="nb">LINK_DIRECTORIES</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_SOURCE_DIR</span><span class="o">}</span><span class="s">/../test/lib</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#指定hello 链接库myprint
+</span><span class="c"></span><span class="nb">TARGET_LINK_LIBRARIES</span><span class="p">(</span><span class="s">hello</span> <span class="s">myprint</span><span class="p">)</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c">#将hello.cpp生成可执行文件hello 
+</span><span class="c"></span><span class="nb">ADD_EXECUTABLE</span><span class="p">(</span><span class="s">hello</span> <span class="o">${</span><span class="nv">SOURCE</span><span class="o">}</span><span class="p">)</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2018-12-05</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/cmake/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/gccg-/" class="prev" rel="prev" title="gcc、g&#43;&#43;"><i class="fas fa-angle-left fa-fw"></i>gcc、g&#43;&#43;</a>
+            <a href="/snmp/" class="next" rel="next" title="SNMP/UDP端口">SNMP/UDP端口<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2017 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">黄金定</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

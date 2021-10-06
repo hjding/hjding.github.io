@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>管理 - 标签 - 黄金定的博客</title>
+        <link>http://example.org/tags/%E7%AE%A1%E7%90%86/</link>
+        <description>管理 - 标签 - 黄金定的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>919406142@qq.com (黄金定)</managingEditor>
+            <webMaster>919406142@qq.com (黄金定)</webMaster><lastBuildDate>Sun, 11 Jul 2021 21:30:38 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E7%AE%A1%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>班主任工作</title>
+    <link>http://example.org/%E7%8F%AD%E4%B8%BB%E4%BB%BB%E5%B7%A5%E4%BD%9C/</link>
+    <pubDate>Sun, 11 Jul 2021 21:30:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/%E7%8F%AD%E4%B8%BB%E4%BB%BB%E5%B7%A5%E4%BD%9C/</guid>
+    <description><![CDATA[总体原则 “一个中心”，以课堂为中心。 ”两个基本点“，纪律、卫生。 “三个学会”，学会做人、学会做事、学会学习。 师生介绍 介绍班主任自己，介绍自己]]></description>
+</item></channel>
+</rss>

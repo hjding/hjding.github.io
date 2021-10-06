@@ -14,7 +14,7 @@
 </item><item>
     <title>CISC和RISC</title>
     <link>http://example.org/cisc%E5%92%8Crisc/</link>
-    <pubDate>Thu, 21 Nov 2019 16:21:16 &#43;0800</pubDate>
+    <pubDate>Thu, 21 Nov 2019 14:23:16 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.org/cisc%E5%92%8Crisc/</guid>
     <description><![CDATA[精简指令集(Reduced Instruction Set Computer, RISC) 这种CPU的设计中，微指令集较为精简，每个指令的运行时间都很短，完成的动作也很单纯，指令的执行效能较佳； 但]]></description>
@@ -25,6 +25,27 @@
     <author>作者</author>
     <guid>http://example.org/snmp/</guid>
     <description><![CDATA[公有mib snmp udp端口161/162 私有mib snmp管理请求（src随机x/dst161） snmp代理回复（src161/dst随机x） 从]]></description>
+</item><item>
+    <title>cmake</title>
+    <link>http://example.org/cmake/</link>
+    <pubDate>Wed, 05 Dec 2018 16:21:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/cmake/</guid>
+    <description><![CDATA[把所有cmake缓存集中到build目录，便于删除 1 2 3 4 mkdir build cd build cmake .. make 命令不区分大小写，参数和变量区分大小写 CMake注释 单行注释：#注释]]></description>
+</item><item>
+    <title>gcc、g&#43;&#43;</title>
+    <link>http://example.org/gccg-/</link>
+    <pubDate>Wed, 28 Nov 2018 16:21:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/gccg-/</guid>
+    <description><![CDATA[c语言的##和# ##表示把两个宏参数贴合在一起，而单个#的功能是将其后面的宏参数进行字符串化操作。 gcc、g++命令 -E 预处理 -S 预处理，编译 -c]]></description>
+</item><item>
+    <title>linux基础</title>
+    <link>http://example.org/linux%E5%9F%BA%E7%A1%80/</link>
+    <pubDate>Wed, 21 Nov 2018 16:21:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/linux%E5%9F%BA%E7%A1%80/</guid>
+    <description><![CDATA[linux环境变量 /etc/profile，/etc/bashrc 是系统全局环境变量设定 /.profile，/.bashrc用户家目录下的私]]></description>
 </item><item>
     <title>8大排序和3大搜索</title>
     <link>http://example.org/8%E5%A4%A7%E6%8E%92%E5%BA%8F%E5%92%8C3%E5%A4%A7%E6%90%9C%E7%B4%A2/</link>

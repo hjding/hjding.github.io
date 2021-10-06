@@ -4,77 +4,14 @@
         <link>http://example.org/</link>
         <description>这是我的网站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>919406142@qq.com (黄金定)</managingEditor>
-            <webMaster>919406142@qq.com (黄金定)</webMaster><lastBuildDate>Fri, 02 Apr 2021 16:42:04 &#43;0800</lastBuildDate>
+            <webMaster>919406142@qq.com (黄金定)</webMaster><lastBuildDate>Wed, 06 Oct 2021 17:00:28 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>有意思的数学</title>
-    <link>http://example.org/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%95%B0%E5%AD%A6/</link>
-    <pubDate>Fri, 02 Apr 2021 16:42:04 &#43;0800</pubDate>
+    <title>21天养成好习惯</title>
+    <link>http://example.org/21%E5%A4%A9%E5%85%BB%E6%88%90%E5%A5%BD%E4%B9%A0%E6%83%AF/</link>
+    <pubDate>Wed, 06 Oct 2021 17:00:28 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://example.org/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%95%B0%E5%AD%A6/</guid>
-    <description><![CDATA[学习对数有什么用 简化运算 乘法变加法，除法变减法，乘方变乘法，开方变除法 可以知道你把钱存银行什么时候能当上世界首富。 自然常数e 用复利解释 1块钱]]></description>
-</item><item>
-    <title>笑话</title>
-    <link>http://example.org/%E7%AC%91%E8%AF%9D/</link>
-    <pubDate>Mon, 01 Feb 2021 16:21:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/%E7%AC%91%E8%AF%9D/</guid>
-    <description><![CDATA[新官上任 很久以前，有一个北方人调到南方一个县城当县官，南方的气候非常湿热，夏天蚊虫特别多。 于是他上任不久就想在他床上装蚊帐，但是缺一根竹竿，]]></description>
-</item><item>
-    <title>党员学习</title>
-    <link>http://example.org/%E5%85%9A%E5%91%98%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Sat, 02 Jan 2021 16:28:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/%E5%85%9A%E5%91%98%E5%AD%A6%E4%B9%A0/</guid>
-    <description><![CDATA[新时代中国特色社会主义思想： ——明确坚持和发展中国特色社会主义，总任务是实现社会主义现代化和中华民族伟大复兴，在全面建成小康社会的基础上，分]]></description>
-</item><item>
-    <title>课堂艺术</title>
-    <link>http://example.org/%E8%AF%BE%E5%A0%82%E8%89%BA%E6%9C%AF/</link>
-    <pubDate>Tue, 01 Dec 2020 16:42:04 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/%E8%AF%BE%E5%A0%82%E8%89%BA%E6%9C%AF/</guid>
-    <description><![CDATA[课堂纪律维持 在课堂纪律差讲不下去的情况下，可以试试停下来30秒，让空气突然安静。 课堂保持活跃，把握好度 要维持学生的兴趣，光枯燥的讲是没有用的]]></description>
-</item><item>
-    <title>2020年教师培训心得</title>
-    <link>http://example.org/2020%E5%B9%B4%E6%95%99%E5%B8%88%E5%9F%B9%E8%AE%AD%E5%BF%83%E5%BE%97/</link>
-    <pubDate>Wed, 30 Sep 2020 20:38:30 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/2020%E5%B9%B4%E6%95%99%E5%B8%88%E5%9F%B9%E8%AE%AD%E5%BF%83%E5%BE%97/</guid>
-    <description><![CDATA[入班仪式 2020年9月29日上午8时许，怀着期待的心情，走进了2020年教师培训的课堂。 首先是班主任李霞老师带领我们进行教师的宣誓仪式，接着]]></description>
-</item><item>
-    <title>读《被讨厌的勇气》</title>
-    <link>http://example.org/%E8%AF%BB%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94/</link>
-    <pubDate>Sun, 22 Mar 2020 16:37:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/%E8%AF%BB%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94/</guid>
-    <description><![CDATA[世界很简单，它之所以看上去复杂是因为“我”的主观作用。人生本来并不复杂，是“我”把人生弄得复杂化了，故而很难获得幸福 应该立足于目的论而不是弗]]></description>
-</item><item>
-    <title>定位strlen(0)挂死问题</title>
-    <link>http://example.org/%E5%AE%9A%E4%BD%8Dstrlen0%E6%8C%82%E6%AD%BB%E9%97%AE%E9%A2%98/</link>
-    <pubDate>Sat, 21 Dec 2019 16:21:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/%E5%AE%9A%E4%BD%8Dstrlen0%E6%8C%82%E6%AD%BB%E9%97%AE%E9%A2%98/</guid>
-    <description><![CDATA[背景 在自测OLT应支持通过SNMP来实现对user account的创建、删除、修改时，下发修改用户角色，使能密码123456，导致agent]]></description>
-</item><item>
-    <title>CISC和RISC</title>
-    <link>http://example.org/cisc%E5%92%8Crisc/</link>
-    <pubDate>Thu, 21 Nov 2019 16:21:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/cisc%E5%92%8Crisc/</guid>
-    <description><![CDATA[精简指令集(Reduced Instruction Set Computer, RISC) 这种CPU的设计中，微指令集较为精简，每个指令的运行时间都很短，完成的动作也很单纯，指令的执行效能较佳； 但]]></description>
-</item><item>
-    <title>SNMP/UDP端口</title>
-    <link>http://example.org/snmp/</link>
-    <pubDate>Tue, 15 Jan 2019 16:21:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/snmp/</guid>
-    <description><![CDATA[公有mib snmp udp端口161/162 私有mib snmp管理请求（src随机x/dst161） snmp代理回复（src161/dst随机x） 从]]></description>
-</item><item>
-    <title>8大排序和3大搜索</title>
-    <link>http://example.org/8%E5%A4%A7%E6%8E%92%E5%BA%8F%E5%92%8C3%E5%A4%A7%E6%90%9C%E7%B4%A2/</link>
-    <pubDate>Tue, 12 Dec 2017 19:22:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/8%E5%A4%A7%E6%8E%92%E5%BA%8F%E5%92%8C3%E5%A4%A7%E6%90%9C%E7%B4%A2/</guid>
-    <description><![CDATA[排序 直接插入排序 一般插入排序，比较是从有序序列的最后一个元素开始，如果比它大则直接插入在其后面，否则一直往前比。如果找到一个和插入元素相等的]]></description>
+    <guid>http://example.org/21%E5%A4%A9%E5%85%BB%E6%88%90%E5%A5%BD%E4%B9%A0%E6%83%AF/</guid>
+    <description><![CDATA[在行为心理学中，人们把一个人的新习惯或理念的形成并得以巩固至少需要21天的现象，称之为21天效应。这是说，一个人的动作、或想法，如果重复21]]></description>
 </item></channel>
 </rss>
