@@ -4,9 +4,30 @@
         <link>http://example.org/</link>
         <description>这是我的网站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>919406142@qq.com (黄金定)</managingEditor>
-            <webMaster>919406142@qq.com (黄金定)</webMaster><lastBuildDate>Thu, 07 Oct 2021 09:22:38 &#43;0800</lastBuildDate>
+            <webMaster>919406142@qq.com (黄金定)</webMaster><lastBuildDate>Tue, 19 Oct 2021 10:30:16 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>摘录</title>
+    <link>http://example.org/%E6%91%98%E5%BD%95/</link>
+    <pubDate>Tue, 19 Oct 2021 10:30:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/%E6%91%98%E5%BD%95/</guid>
+    <description><![CDATA[诗 未选择的路——罗伯特·弗罗斯特 《The Road Not Taken》 《未选择的路》 ——Robert Frost ——罗伯特·弗罗斯特 Two roads diverged in a yellow wood, 黄色的树林里分出两]]></description>
+</item><item>
+    <title>关于情商</title>
+    <link>http://example.org/%E6%83%85%E5%95%86/</link>
+    <pubDate>Mon, 18 Oct 2021 16:21:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/%E6%83%85%E5%95%86/</guid>
+    <description><![CDATA[WHAT 自我意识（了解自己的情绪） 管理情绪（掌控和管理自己的情绪） 自我激励（自我驱动和鞭策） 识别他人情绪（同理心和换位思考） 共情能力: 感谢、理解、]]></description>
+</item><item>
+    <title>课堂幽默</title>
+    <link>http://example.org/%E8%AF%BE%E5%A0%82%E5%B9%BD%E9%BB%98/</link>
+    <pubDate>Mon, 18 Oct 2021 16:21:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/%E8%AF%BE%E5%A0%82%E5%B9%BD%E9%BB%98/</guid>
+    <description><![CDATA[幽默实录 和学生打赌：“来打个赌，我敢保证咱们班一定有两个人同月同日生日！”当时学生异常激动地相互问生日，不到10秒就找出这样的两个人。 有的人]]></description>
+</item><item>
     <title>如何高效备课</title>
     <link>http://example.org/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E5%A4%87%E8%AF%BE/</link>
     <pubDate>Thu, 07 Oct 2021 09:22:38 &#43;0800</pubDate>
@@ -43,10 +64,10 @@
     <description><![CDATA[有多久，我们忘了跟父母好好地说话，不大呼小叫地。要知道，他们是生我养我的人啊。 有多久，我们忘了跟爱人好好地说话，不针锋相对的。要知道，他是当]]></description>
 </item><item>
     <title>数学小天地</title>
-    <link>http://example.org/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%95%B0%E5%AD%A6/</link>
+    <link>http://example.org/%E6%95%B0%E5%AD%A6%E5%B0%8F%E5%A4%A9%E5%9C%B0/</link>
     <pubDate>Fri, 02 Apr 2021 16:42:04 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://example.org/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%95%B0%E5%AD%A6/</guid>
+    <guid>http://example.org/%E6%95%B0%E5%AD%A6%E5%B0%8F%E5%A4%A9%E5%9C%B0/</guid>
     <description><![CDATA[学习对数log有什么用？ 简化运算。 乘法变加法: $$ \lg a·b=\lg a+\lg b $$ 除法变减法: $$ \lg \frac{a} {b}=\lg a-\lg b $$ 乘方变乘法: $$ \lg a^n=n·\lg a $$ 开方变]]></description>
 </item><item>
     <title>笑话</title>
@@ -55,26 +76,5 @@
     <author>作者</author>
     <guid>http://example.org/%E7%AC%91%E8%AF%9D/</guid>
     <description><![CDATA[新官上任 很久以前，有一个北方人调到南方一个县城当县官，南方的气候非常湿热，夏天蚊虫特别多。 于是他上任不久就想在他床上装蚊帐，但是缺一根竹竿，]]></description>
-</item><item>
-    <title>政治究竟是什么</title>
-    <link>http://example.org/%E6%94%BF%E6%B2%BB%E7%A9%B6%E7%AB%9F%E6%98%AF%E4%BB%80%E4%B9%88/</link>
-    <pubDate>Thu, 07 Jan 2021 16:28:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/%E6%94%BF%E6%B2%BB%E7%A9%B6%E7%AB%9F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
-    <description><![CDATA[习近平总书记常说：“广大党员干部要不断提高政治素养及政治能力。” 那么想要时刻用这句话警醒自己，不明白这句话的意思是不可以的。 首当其冲，政治究]]></description>
-</item><item>
-    <title>党员学习</title>
-    <link>http://example.org/%E5%85%9A%E5%91%98%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Sat, 02 Jan 2021 16:28:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/%E5%85%9A%E5%91%98%E5%AD%A6%E4%B9%A0/</guid>
-    <description><![CDATA[新时代中国特色社会主义思想： ——明确坚持和发展中国特色社会主义，总任务是实现社会主义现代化和中华民族伟大复兴，在全面建成小康社会的基础上，分]]></description>
-</item><item>
-    <title>课堂艺术</title>
-    <link>http://example.org/%E8%AF%BE%E5%A0%82%E8%89%BA%E6%9C%AF/</link>
-    <pubDate>Tue, 01 Dec 2020 16:42:04 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/%E8%AF%BE%E5%A0%82%E8%89%BA%E6%9C%AF/</guid>
-    <description><![CDATA[课堂纪律维持 在课堂纪律差讲不下去的情况下，可以试试停下来30秒，让空气突然安静。 课堂保持活跃，把握好度 要维持学生的兴趣，光枯燥的讲是没有用的]]></description>
 </item></channel>
 </rss>
